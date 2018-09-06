@@ -21,26 +21,35 @@ stops.unshift('Glasgow Queen St')
 stops.insert(4, 'Polmont')
 
 #4
-index_position = stops.index("Linlithgow")
-p index_position
+p stops.index("Linlithgow")
 
 #5
 stops.delete('Livingston')
+p stops
 
 #6
-
+stops.delete_at(1)
+p stops
 
 #7
+p stops.count()
+# can also use stops.length()
 
-
-#8
-
+#8 (many different ways to do the same thing)
+p stops[3]
+p stops.at(3)
+p stops.each{ |stop|
+  if stop == "Falkirk High"
+    p stop
+  end}
 
 #9
-reverse_index = stops.reverse
-p reverse_index
+# reverse_index = stops.reverse
+# p reverse_index
+
+p stops.reverse
 
 #10
-
-
-p stops
+for station in stops
+  p station
+end
